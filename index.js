@@ -10,14 +10,4 @@ app.listen(app.get('port'), app.get('host'), () => {
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// mongoose.connect(process.env.mongoDB, { useNewUrlParser: true, useUnifiedTopology: true, })
-//     .then(db => {
-//         // const collection = db.db('geojson').collection('geojson-datas')
-//         console.log('[OK] DB is connected')
-
-//     }
-//     )
-//     .catch(err => console.error(err));
-
-
 app.use('/api/', require('./routes/index'))
